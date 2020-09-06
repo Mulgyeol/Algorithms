@@ -7,7 +7,7 @@ def solution(array, commands):
     return answer
 
 
-# 다른 사람의 풀이
+# 다른 사람의 풀이(람다식, 여러 변수에 한꺼번에 대입, sorted)
 # def solution(array, commands):
 #     return list(map(lambda x:sorted(array[x[0]-1:x[1]])[x[2]-1], commands))
 
