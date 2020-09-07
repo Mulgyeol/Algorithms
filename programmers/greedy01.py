@@ -30,7 +30,7 @@ def solution(n, lost, reserve):
     return answer
 
 # 다른 사람 풀이 참고 후 나름 간결하게
-def solution(n, lost, reserve):
+def solution2(n, lost, reserve):
     new_lost = list(set(lost) - set(reserve))
     new_reserve = list(set(reserve) - set(lost))
     
