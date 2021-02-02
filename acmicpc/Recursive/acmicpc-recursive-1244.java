@@ -34,7 +34,7 @@ public class acmicpc_1244 {
 		}
 		
 		for(int i=0; i<num; i++) {
-			if((i+1)%10 != 0)
+			if((i+1)%20 != 0)
 				System.out.print(arr[i] + " ");
 			else
 				System.out.println(arr[i]);
