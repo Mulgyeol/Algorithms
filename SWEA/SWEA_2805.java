@@ -20,7 +20,7 @@ public class SWEA_2805 {
 			for(int i=0; i<N; i++) {
 				String s = bf.readLine();
 				for(int j=0; j<N; j++) {
-					farm[i][j] = Character.getNumericValue(s.charAt(j)); //인트
+					farm[i][j] = Character.getNumericValue(s.charAt(j)); // int로 값 저장
 				}
 			}
 			
@@ -28,21 +28,17 @@ public class SWEA_2805 {
 			int take = 0; // 취할 면적
 			int sum = 0; // 합계
 			
-			for(int i=0; i<N/2; i++) { // 위 절반
+			for(int i=0; i<N/2+1; i++) { // 위 절반  + 중간 포함
 				empty = N/2-i;
-				take = 2*i + 1;
+				take = N-(2*empty);
 				for(int j = empty; j<empty+take; j++) {
 					sum += farm[i][j];
 				}
 			}
 			
-			for(int j=0; j<N; j++) { // 가운데
-				sum += farm[(N/2)][j];
-			}
-			
 			for(int i=(N/2+1); i<N; i++) { // 밑 절반
 				empty = i-(N/2);
-				take = (2*N)-(2*i)-1;
+				take = N-(2*empty);
 				for(int j = empty; j<empty+take; j++) {
 					sum += farm[i][j];
 				}
