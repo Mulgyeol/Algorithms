@@ -1,8 +1,8 @@
-package com.recursive;
+package com.algo.acmicpc;
 
 import java.util.Scanner;
 
-public class Recursive_17478 {
+public class acmicpc_recursive_17478 {
 	
 	private static StringBuilder sb = new StringBuilder();
 

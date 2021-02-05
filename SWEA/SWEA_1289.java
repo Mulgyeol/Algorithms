@@ -1,4 +1,4 @@
-package com.my.algo;
+package com.algo.SWEA;
 
 import java.util.Scanner;
 

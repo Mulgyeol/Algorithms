@@ -1,4 +1,4 @@
-package com.ssafy.homework;
+package com.algo.SWEA;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,8 +13,8 @@ public class SWEA_1954 {
 		
 		int T = Integer.parseInt(br.readLine());
 		
-		int[] moveColumn = {1,0,-1,0}; //하좌상우
-		int[] moveRow = {0,-1,0,1};
+		int[] moveRow = {1,0,-1,0}; //하좌상우 행
+		int[] moveColumn = {0,-1,0,1}; //하상좌우 열
 		
 		for (int t = 1; t <= T; t++) {
 			int n = Integer.parseInt(br.readLine());
@@ -23,7 +23,7 @@ public class SWEA_1954 {
 			int y=0, x=0;
 			int[][] map = new int[n][n];
 			
-			map[y][x] = cnt++; // 0,0
+			map[y][x] = cnt++; // [0][0]
 			
 			for(int i = n-1; i>0; i--) {
 				map[y][++x] = cnt++; // 0번째 행은 미리 다 채워둠
@@ -32,8 +32,8 @@ public class SWEA_1954 {
 			for(int i = n-1; i>0; i--) {
 				for(int j=0; j<2; j++) {
 					for(int k=0; k<i; k++) {
-						x += moveRow[moveIndex];
-						y += moveColumn[moveIndex];
+						x += moveColumn[moveIndex];
+						y += moveRow[moveIndex];
 						map[y][x] = cnt++;
 					}
 					moveIndex = (moveIndex+1) % 4;

@@ -1,4 +1,4 @@
-package com.algo.study;
+package com.algo.acmicpc;
 
 import java.io.BufferedReader;
 import java.io.IOException;

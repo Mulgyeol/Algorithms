@@ -1,4 +1,4 @@
-package com.ssafy.inclass;
+package com.algo.SWEA;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -13,33 +13,40 @@ public class SWEA_1218 {
 			int n = sc.nextInt();
 			String s = sc.next();
 			int result = 1;
+			char peek;
 			
 			for(int i=0; i<n; i++) {
 				if(s.charAt(i) == '<' || s.charAt(i) == '{' || s.charAt(i)== '[' || s.charAt(i) == '(') {
 					stack.push(s.charAt(i));
 					continue;
 				}else {
-					char peek = stack.pop();
-					if(peek == '<' && s.charAt(i)!='>') {
+					if(stack.isEmpty()) {
 						result =0;
 						break;
-					}
-					else if(peek == '[' && s.charAt(i)!=']') {
-						result =0;
-						break;
-					}
-					else if(peek == '{' && s.charAt(i)!='}') {
-						result =0;
-						break;
-					}
-					else if(peek == '(' && s.charAt(i)!=')') {
-						result =0;
-						break;
+					}else {
+						peek = stack.pop();
+						
+						if(peek == '<' && s.charAt(i)!='>') {
+							result =0;
+							break;
+						}
+						else if(peek == '[' && s.charAt(i)!=']') {
+							result =0;
+							break;
+						}
+						else if(peek == '{' && s.charAt(i)!='}') {
+							result =0;
+							break;
+						}
+						else if(peek == '(' && s.charAt(i)!=')') {
+							result =0;
+							break;
+						}
 					}
 				}
 			}
 			
-			//if(!stack.empty()) result =0;
+			if(!stack.empty()) result =0;
 			
 			System.out.println("#"+t+" "+result);
 			
