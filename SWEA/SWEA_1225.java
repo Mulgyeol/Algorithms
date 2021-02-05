@@ -18,21 +18,19 @@ public class SWEA_1225 {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 			Queue<Integer> queue = new LinkedList<Integer>();
 			
-			int item;
-			boolean flag = true;
 			
 			for(int i=0; i<8; i++) {
 				queue.offer(Integer.parseInt(st.nextToken()));
 			}
 			
-			while(flag) {
+			int item = 1;
+			while(item > 0) {
 				for(int i=1; i<=5; i++) {
 					item = queue.poll()-i;
 					if(item > 0) {
 						queue.offer(item);
 					}else {
 						queue.offer(0);
-						flag = false;
 						break;
 					}
 				}
