@@ -1,4 +1,4 @@
-package com.ssafy.notyetclassification;
+package com.algo.SWEA;
 
 import java.io.BufferedReader;
 import java.io.IOException;
