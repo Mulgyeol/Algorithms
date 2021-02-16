@@ -1,4 +1,4 @@
-package com.ssafy.inclass;
+package com.algo.acmicpc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class acmicpc_2961_doyoungFood2 {
 	
 	private static int N, min = Integer.MAX_VALUE;
-	private static int[][] gredients;
+	private static int[][] ingredients;
 	private static boolean[] choice;
 
 
@@ -17,13 +17,13 @@ public class acmicpc_2961_doyoungFood2 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		N = Integer.parseInt(br.readLine());
-		gredients = new int[N][2];
+		ingredients = new int[N][2];
 		choice = new boolean[N];
 		
 		for(int i=0;i<N;i++) {
 			st = new StringTokenizer(br.readLine(), " ");
-			gredients[i][0] = Integer.parseInt(st.nextToken());
-			gredients[i][1] = Integer.parseInt(st.nextToken());
+			ingredients[i][0] = Integer.parseInt(st.nextToken());
+			ingredients[i][1] = Integer.parseInt(st.nextToken());
 		}
 		
 		findCook(0,0);
@@ -38,8 +38,8 @@ public class acmicpc_2961_doyoungFood2 {
 			int sum = 0;
 			for(int i=0; i<N; i++) {
 				if(choice[i] == true) {
-					mul *= gredients[i][0];
-					sum += gredients[i][1];
+					mul *= ingredients[i][0];
+					sum += ingredients[i][1];
 				}
 			}
 			if(min > Math.abs(mul - sum)) {
