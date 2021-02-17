@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 //import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class acmicpc_17135_castleDefence {
+public class acmicpc_17135_castleDefense {
 	private static int N, M, D;
 	private static int[][] board;
 	private static int[][] boardTemp;
