@@ -35,13 +35,13 @@ public class DailyPractice_12_Restaurant {
 		if(flag == true) return;
 		if(!isAvailable(row, col)) return;
 		
+		arr[row][col]='X';
 		if(col >= C-1) {
 			ans++;
 			flag = true;
 			return;
 		}
 		
-		arr[row][col]='X';
 		setPipe(row-1,col+1);
 		if(flag == true) return;
 		setPipe(row,col+1);
