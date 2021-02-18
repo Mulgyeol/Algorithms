@@ -1,4 +1,4 @@
-package com.ssafy.inclass;
+package com.algo.test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
