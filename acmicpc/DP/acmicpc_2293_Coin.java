@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class acmipcic_2293_Coin {
+public class acmicpc_2293_Coin {
 	
 	static int[] coins;
 	static int[] dp;
