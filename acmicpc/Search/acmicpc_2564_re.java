@@ -12,25 +12,22 @@ public class acmicpc_2564_re {
 		int C = Integer.parseInt(st.nextToken());
 		int R = Integer.parseInt(st.nextToken());
 		int storeCnt = Integer.parseInt(br.readLine());
-		int[][] storePos = new int[storeCnt+1][2];
 		int[] posRE = new int[storeCnt+1];
 		int answer = 0;
 		
 		for(int i=0; i<storeCnt+1; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
-			storePos[i][0] = Integer.parseInt(st.nextToken());
-			storePos[i][1] = Integer.parseInt(st.nextToken());
-		}
-		
-		for(int i=0; i<storeCnt+1; i++) {
-			if(storePos[i][0] == 1) {
-				posRE[i] = storePos[i][1];
-			}else if(storePos[i][0] == 2) {
-				posRE[i] = -R-storePos[i][1];
-			}else if(storePos[i][0] == 3) {
-				posRE[i] = -storePos[i][1];
-			}else if(storePos[i][0] == 4) {
-				posRE[i] = C+storePos[i][1];
+			int dir = Integer.parseInt(st.nextToken());
+			int dis = Integer.parseInt(st.nextToken());
+			
+			if(dir == 1) {
+				posRE[i] = dis;
+			}else if(dir == 2) {
+				posRE[i] = -R-dis;
+			}else if(dir == 3) {
+				posRE[i] = -dis;
+			}else if(dir == 4) {
+				posRE[i] = C+dis;
 			}
 		}
 		
